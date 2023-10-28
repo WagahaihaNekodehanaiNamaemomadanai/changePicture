@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>アナログ文書のデジタル変換ツール</title>
     <link rel="stylesheet" href="main_pc.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +45,7 @@
                 <li>HEIC形式には対応していません、iPhoneをお使いの方はご注意ください。</li>
                 <li>幅が3024を超える画像は、幅を3024に補正するようになっています。</li>
                 <li>画像によってはうまく補正できない場合もございます。ご容赦ください。</li>
+                <li>カラー画像は白黒画像になります。ご容赦ください。(色の形式はRGBのままです)</li>
                 <li>当サイトは完全無料で利用することができます。ご安心ください。</li>
             </ul>
         </div>
@@ -87,6 +88,7 @@
         スマートフォンの方は長押し、パソコンの方は右クリックで保存してください。</p>
         <button type="button" id ="CButton">閉じる</button>
         <canvas id="hennsyuu"></canvas>
+        <img src = "NoImages.png" id = "originSize" alt = "変更後のオリジナルサイズの画像">
         <br>
     </div>
     <div id="loadingWindow">
