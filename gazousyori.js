@@ -12,6 +12,8 @@ const hozonhyouzi = document.getElementById("PictureWindow");
 const toziru = document.getElementById("CButton");
 const StopS = document.getElementById("body");
 const originSize = document.getElementById("originSize");
+const nowLoading = document.getElementById("nowLoading");
+const zikkou = document.getElementById("zikkou");
 let newGazou = "";
 let sdwidth = 3024;
 let haba;
@@ -35,7 +37,6 @@ let newSrc = "";
 
 function konnitiha() {
     if (newGazou == "") {
-        window.alert("画像が選択されていません。画像を選択してからやり直してください。");
     }
     else {
         changeOK = true;
@@ -65,8 +66,13 @@ function konnitiha() {
         //changePicture.height = settingH;
         //changePicture.style.display = "none";
         newPicture.width = settingW;
+        nowLoading.style.display = "none";
     }
 
+}
+
+konnitiha.onload = function(){
+    nowLoading.style.display = "none";
 }
 
 function Gensyoku1(cd, wLen, hLen) { //cdはcanvas digit の略である
@@ -393,10 +399,21 @@ hozon.addEventListener("click", function (e) {
     }
 })
 
+zikkou.addEventListener("click", function(e){
+    if (newGazou == "") {
+        window.alert("画像が選択されていません。画像を選択してからやり直してください。");
+    }
+    else{
+        nowLoading.style.display = "block";
+        window.setTimeout(konnitiha, 10);
+    }
+})
+
 toziru.addEventListener("click", function (e) {
     hozonhyouzi.style.display = "none";//noneにすることで、非表示に
     StopS.style.overflow = "visible";//visibleにすることで、スクロールを可能に
 })
+
 
 
 
