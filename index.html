@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang=ja>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>アナログ文書のデジタル変換ツール</title>
+    <link rel="stylesheet" href="main_pc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Rampart+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>アナログ文書の<br>デジタル変換ツール
+        </h1>
+        <div id="header_background"></div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="index.html#kiyaku">規約</a></li>
+            <li><a href="index.html#junbi"> 変換</a></li>
+        </ul>
+    </nav>
+    <div class="yohaku"></div>
+
+    <main>
+        <div class="content" id="setumeimidasi">
+            <h2>どんなことができるのか？</h2>
+            <br>
+            <img src="ba.png" width="300px" alt="使用例の説明画像" id="ba">
+            <div class="yohaku"></div>
+            <p>変換ツールを使うと、影がなくなり、<br>
+                こんなにきれいになります
+            </p>
+            <br>
+            <h2 id = "kiyaku">注意事項</h2>
+            <ul>
+                <li>HEIC形式には対応していません、iPhoneをお使いの方はご注意ください。</li>
+                <li>幅が3024を超える画像は、幅を3024に補正するようになっています。</li>
+                <li>画像によってはうまく補正できない場合もございます。ご容赦ください。</li>
+                <li>当サイトは完全無料で利用することができます。ご安心ください。</li>
+            </ul>
+        </div>
+        <div class="yohaku"></div>
+        <div id="junbisetumei">
+            <div class="content" id="junbi">
+                <h2>ステップ1：<br>
+                    　　画像を選択してください</h2>
+                <button type="button" id="CameraUp"><img src="camera.png" width="150px"><br>
+                    <p class="buttonUse">Use Camera</p>
+                </button>
+                <button type="button" id="fileUp"><img src="file.png" width="150px"><br>
+                    <p class="buttonUse">Select Picture</p>
+                </button>
+                <br>
+                <input type="file" accept="image/jpeg" id="usecamera" capture="camera" class="inputPicture"
+                    alt="画像ファイルを選択">
+                <input type="file" accept="image/jpeg" id="notcamera" class="inputPicture" alt="画像ファイルを選択">
+                <br>
+                <br>
+                <img src="NoImages.png" id="subPicture1" width="300px" alt="変換前の画像"><br>
+                <br>
+            </div>
+            <div class="yohaku"></div>
+            <div class="content" id="change">
+                <h2>ステップ2：<br>画像を変換しましょう</h2>
+                <button type="button" id="zikkou" onclick="konnitiha()">ChangePicture</button>
+                <br>
+                <br>
+                <img src="NoImages.png" id="subPicture2" width="300px" alt="変換後の画像">
+                <br>
+                <br>
+                <button type = "button" id = "hozon">保存する</button>
+            </div>
+        </div>
+    </main>
+    <div id="PictureWindow">
+        <h1 class="sub">画像拡大表示中</h1>
+        <p>本来のサイズで表示しています。<br>
+        スマートフォンの方は長押し、パソコンの方は右クリックで保存してください。</p>
+        <button type="button" id ="CButton">閉じる</button>
+        <canvas id="hennsyuu"></canvas>
+        <br>
+    </div>
+    <div id="loadingWindow">
+    </div>
+    <footer>
+        <small>&copy;檀ゼミ研究班</small>
+    </footer>
+    <script src="main.js"></script>
+    <script src="gazousyori.js"></script>
+</body>
+
+</html>
