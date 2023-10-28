@@ -11,6 +11,7 @@ const hozon = document.getElementById("hozon");
 const hozonhyouzi = document.getElementById("PictureWindow");
 const toziru = document.getElementById("CButton");
 const StopS = document.getElementById("body");
+const originSize = document.getElementById("originSize");
 let newGazou = "";
 let sdwidth = 3024;
 let haba;
@@ -382,6 +383,7 @@ hozon.addEventListener("click", function (e) {
     if (changeOK == true){
         hozonhyouzi.style.display ="block";
         StopS.style.overflow = "hidden";
+        originSize.src = newSrc;
 
     }
     else{
