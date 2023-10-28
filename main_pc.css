@@ -270,6 +270,9 @@
         font-weight: bold;
         color: white;
     }
+    #hennsyuu{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -526,6 +529,10 @@
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: bold;
         color: white;
+    }
+
+    #hennsyuu{
+        display: none;
     }
 
     /*@media screen and (min-height: 900px) {
