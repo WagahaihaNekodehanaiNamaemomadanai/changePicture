@@ -31,6 +31,7 @@ let settingH;
 let originW;
 let originH;
 let changeOK = false;
+let newSrc = "";
 
 function konnitiha() {
     if (newGazou == "") {
@@ -55,8 +56,10 @@ function konnitiha() {
         changePicture.height = newPicture.height;
         con.drawImage(newPicture, 0, 0, changePicture.width, changePicture.height,);
         Gensyoku1(changePicture, changePicture.width, changePicture.height);
-        var newSrc = changePicture.toDataURL();
+        newSrc = changePicture.toDataURL();
         secondPicturue.src = newSrc;
+        originSize.src = newSrc;
+
         secondPicturue.width = settingW;
         //changePicture.width = settingW;
         //changePicture.height = settingH;
@@ -383,7 +386,6 @@ hozon.addEventListener("click", function (e) {
     if (changeOK == true){
         hozonhyouzi.style.display ="block";
         StopS.style.overflow = "hidden";
-        originSize.src = newSrc;
 
     }
     else{
