@@ -87,8 +87,8 @@ function Gensyoku1(cd, wLen, hLen) { //cdはcanvas digit の略である
     newB = [];
     let ookisa = 130;  //130
     let pd = con.getImageData(0, 0, wLen, hLen); //pd　は pixel data の略
-    //makeRGB(pd);
-    makeBW(pd);
+    makeRGB(pd);
+    //makeBW(pd);
     RGB2HSV(R, G, B);
     //kyoutyou();
     reduceV();
